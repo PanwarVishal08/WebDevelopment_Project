@@ -32,7 +32,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
-        theme: minima
+        theme: Midnight
         with:
           source: ./
           destination: ./_site
@@ -42,7 +42,6 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      theme: minima
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
